@@ -4,8 +4,8 @@ const hbs = require("hbs");
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const app = express();
-
 const name = "Nirbyoleek";
+const port = process.env.PORT || 3000;
 
 // DEFINE PATHS FOR EXPRESS CONFIG
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -89,6 +89,6 @@ app.get("*", (req, res) => {
 });
 
 // PORT CONFIG
-app.listen(3000, () => {
-  console.log("Server is up and running on port 3000.");
+app.listen(port, () => {
+  console.log("Server is up and running on port " + port);
 });
