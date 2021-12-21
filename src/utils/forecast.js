@@ -1,6 +1,6 @@
 const request = require("request");
 const forecast = (latitude, longitude, callback) => {
-  const url = `http://api.weatherstack.com/current?access_key=8dd1a073100d5dccdbf3dc1523f26aee&query=${latitude},${longitude}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=f706bc5e2104b5ec6e4d233dfa77473c&units=metric`;
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Cannot connect to the weather service!", undefined);
@@ -9,7 +9,9 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        ` ${body.current.weather_descriptions[0]}.It is currently ${body.current.temperature} degrees. It feels like  ${body.current.feelslike} degrees.`
+        body
+        // `${body.weather[0].description}.It is currently ${body.main.temp} degrees and feels like ${body.main.feels_like}.
+        // The Humidity is around ${body.main.humidity}`
       );
     }
   });

@@ -1,48 +1,200 @@
 body {
-  width: 650px;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
   color: #333333;
-  margin: 1px auto;
-  font-family: arial;
-  padding: 0 15px;
+  margin: 1px;
+  width: 90vw;
+  padding: 0 5rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+input {
+  padding: 8px;
+  width: 15vw;
+  border: 1px solid #cccccc;
+  border: 1px solid #828ce1;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 8px;
+}
+h1 {
+  color: #828ce1;
+  margin-top: 0;
+}
 .main-content {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin-top: 1rem;
 }
+.Header {
+  display: flex;
+  width: 90 vw;
+  justify-content: space-between;
+}
+.main-forecast {
+  width: 80vw;
+  height: 50vh;
+  border-radius: 20px;
+  background: linear-gradient(248.66deg, #eeaeca 0%, #91bef3 100%);
+  margin: 10px auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.Temperature {
+  margin-top: 10rem;
+}
+.Degree {
+  display: flex;
+  justify-content: space-between;
+  width: 16vw;
+}
+#temp {
+  filter: drop-shadow(-4.51px 2.26px 0.75px rgba(0, 0, 0, 0.15));
+  font-size: 10rem;
+  font-weight: 200;
+  color: white;
+  line-height: 120%;
+
+  width: 30%;
+}
+#Celsius {
+  filter: drop-shadow(-4.51px 2.26px 0.75px rgba(0, 0, 0, 0.15));
+  font-size: 5rem;
+  font-weight: 200;
+  color: white;
+
+  width: 35%;
+}
+#Loading {
+  font-size: 2rem;
+  font-weight: 200;
+  color: white;
+  line-height: 120%;
+
+  letter-spacing: 4px;
+}
+.Today {
+  margin-top: 20rem;
+  margin-right: 2rem;
+}
+#Time {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  margin-left: 12rem;
+}
+#Day {
+  margin-left: 8rem;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+}
+img {
+  width: 80px;
+  color: white;
+  height: 50px;
+}
+h3 {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 120%;
+
+  color: #ffffff;
+
+  text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
+}
+#Forecast,
+#feelsLike {
+  line-height: 120%;
+  font-size: 30px;
+
+  text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
+}
+#Forecast {
+  font-size: 2rem;
+  color: white;
+}
+
 footer {
   color: #888888;
-  border-top: 1px solid #eeeeee;
+  border-top: 2px solid #a19f9f;
   margin-top: 16px;
   padding: 16px 0;
+  width: 90vw;
 }
-header {
-  margin-top: 20px;
-  margin-bottom: 48px;
-}
+
 h1 {
   margin-bottom: 16px;
 
   font-size: 64px;
 }
-header a {
-  color: #888888;
-  text-decoration: none;
-  margin-right: 16px;
-}
-input {
-  padding: 8px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
+
 button {
   color: white;
-  background: #888888;
-  border-radius: 8px;
+  background: #828ce1;
+  border-radius: 10px;
 
   cursor: pointer;
   padding: 8px;
   border: 1px solid #888888;
+}
+.sub-forecast {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100vw;
+    overflow: hidden;
+  }
+  .Header {
+    flex-direction: column;
+  }
+  input {
+    width: 60vw;
+    padding: 12px;
+  }
+  .Temperature,
+  .Today {
+    margin-top: inherit;
+  }
+  .main-forecast {
+    flex-direction: column;
+    height: 80vh;
+    width: 80vw;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .Degree {
+    width: 62vw;
+  }
+  #temp {
+    font-size: 8rem;
+  }
+  #Celsius {
+    font-size: 6rem;
+  }
+  #Loading,
+  #Forecast {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  #Time {
+    text-align: center;
+    margin-left: 0;
+  }
+  #Day {
+    margin-left: 0;
+
+    text-align: center;
+  }
+  footer {
+    margin-top: 5rem;
+  }
 }
