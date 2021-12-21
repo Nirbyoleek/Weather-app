@@ -29,17 +29,17 @@ weatherForm.addEventListener("submit", (e) => {
 
 // DEFAULT
 
-// fetch(`/weather?address=Delhi`).then((response) => {
-//   response.json().then((data) => {
-//     if (data.error) {
-//       loading.textContent = data.error;
-//     } else {
-//       loading.textContent = data.location;
-//       forecastData.textContent = data.forecast;
-//       temp.textContent = `${Math.floor(data.temperature)}`;
-//     }
-//   });
-// });
+fetch(`/weather?address=Delhi`).then((response) => {
+  response.json().then((data) => {
+    if (data.error) {
+      loading.textContent = data.error;
+    } else {
+      loading.textContent = data.location;
+      forecastData.textContent = data.forecast;
+      temp.textContent = `${Math.floor(data.temperature)}`;
+    }
+  });
+});
 
 const today = new Date();
 let h = today.getHours();
