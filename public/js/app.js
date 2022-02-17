@@ -61,13 +61,13 @@ const months = [
 ];
 
 const days = [
-  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
+  "Sunday",
 ];
 Time.textContent = h > 12 ? `${h}:${m} pm` : `${h}:${m} am`;
 // date.textContent = `${today.getDate()}th ${months[today.getMonth()]}`;

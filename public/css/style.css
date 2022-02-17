@@ -8,15 +8,19 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  animation: intro 5s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 input {
   padding: 8px;
   width: 15vw;
-  border: 1px solid #cccccc;
-  border: 1px solid #828ce1;
+
+  border: 2px solid #828ce1;
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 8px;
+}
+input:focus {
+  animation: textEnter 2s;
 }
 h1 {
   color: #828ce1;
@@ -31,8 +35,12 @@ h1 {
 }
 .Header {
   display: flex;
-  width: 90 vw;
+  width: 85vw;
   justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+}
+button:hover {
+  background-color: #828be1ad;
 }
 .main-forecast {
   width: 80vw;
@@ -40,13 +48,13 @@ h1 {
   border-radius: 20px;
   background: linear-gradient(248.66deg, #eeaeca 0%, #91bef3 100%);
   margin: 10px auto;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
 }
 .Temperature {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .Degree {
   display: flex;
@@ -62,13 +70,15 @@ h1 {
 
   width: 30%;
 }
+#Forecast {
+  font-variant: small-caps;
+}
 #Celsius {
-  filter: drop-shadow(-4.51px 2.26px 0.75px rgba(0, 0, 0, 0.15));
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 200;
   color: white;
-
-  width: 35%;
+  margin-left: 1rem;
+  width: 25%;
 }
 #Loading {
   font-size: 2rem;
@@ -79,7 +89,7 @@ h1 {
   letter-spacing: 4px;
 }
 .Today {
-  margin-top: 20rem;
+  margin-top: 15rem;
   margin-right: 2rem;
 }
 #Time {
@@ -165,8 +175,10 @@ button {
   }
   .main-forecast {
     flex-direction: column;
-    height: 80vh;
+    height: 50vh;
     width: 80vw;
+    justify-content: center;
+    align-items: center;
   }
   h1 {
     font-size: 3rem;
@@ -179,6 +191,7 @@ button {
   }
   #Celsius {
     font-size: 6rem;
+    width: 40%;
   }
   #Loading,
   #Forecast {
@@ -194,7 +207,27 @@ button {
 
     text-align: center;
   }
+
   footer {
     margin-top: 5rem;
+  }
+}
+
+/*  ANIMATION */
+@keyframes intro {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textEnter {
+  from {
+    scale: 1;
+  }
+  to {
+    opacity: 1.3;
   }
 }
