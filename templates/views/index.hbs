@@ -3,23 +3,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Weather</title>
+<title>Weatherly</title>
 <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+
     <div class="main-content">
 
-      {{>header}}
-      <p> Check Your Weather Here! </p>
-
+<div class="Header">
+  <div>
+    <h1>Weatherly</h1>
+  </div>
+  <div>
       <form>
-        <input placeholder="Location">
-        <button >Search</button>
+        <input placeholder="Enter city name ...">
+        <button type="submit">Search </button>
       </form>
-      <p id="Loading"></p>
-      <p id="Forecast"></p>
+
+  </div>
+</div>    
+<div class="main-forecast">
+  <div class="Temperature">
+    <div class="Degree">
+
+<div id="temp">13 </div>
+    <div id="Celsius">&#8451</div>
+
     </div>
+    
+    <div id="Forecast">Haze</div>
+      <div id="Loading">Mumbai</div>
+  </div>
+  <div class="Today">
+    <div id="Time">12</div>
+    <div id="Day">Monday</div>
+  </div>
+</div>    
+ 
+     </div> 
 
    
     {{>footer}}
