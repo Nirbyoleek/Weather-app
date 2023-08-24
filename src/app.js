@@ -4,7 +4,7 @@ const hbs = require("hbs");
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const app = express();
-const name = "Nirbyoleek";
+
 const port = process.env.PORT || 3000;
 
 // DEFINE PATHS FOR EXPRESS CONFIG
@@ -23,7 +23,6 @@ app.use(express.static(publicDirectoryPath));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather",
-    name,
   });
 });
 
